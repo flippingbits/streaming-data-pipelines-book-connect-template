@@ -1,10 +1,21 @@
 package com.manning.streamingdatapipelines;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.kafka.connect.data.Schema;
+import org.apache.kafka.connect.data.SchemaBuilder;
+import org.apache.kafka.connect.data.Struct;
 import org.apache.kafka.connect.source.SourceRecord;
 import org.apache.kafka.connect.source.SourceTask;
+
+import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
+
+import static java.util.Collections.emptyMap;
+import static org.apache.kafka.connect.data.SchemaBuilder.string;
 
 public class AnalyticsApiSourceTask extends SourceTask {
     AnalyticsApiSourceConnectorConfig config;
@@ -22,7 +33,9 @@ public class AnalyticsApiSourceTask extends SourceTask {
     @Override
     public List<SourceRecord> poll() throws InterruptedException {
       List<SourceRecord> sourceRecords = new ArrayList<>();
+
       // TODO: To be implemented
+
       return sourceRecords;
     }
 
