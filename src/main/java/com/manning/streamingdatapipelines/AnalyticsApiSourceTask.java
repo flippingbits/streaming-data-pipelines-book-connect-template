@@ -18,7 +18,8 @@ import static java.util.Collections.emptyMap;
 import static org.apache.kafka.connect.data.SchemaBuilder.string;
 
 public class AnalyticsApiSourceTask extends SourceTask {
-    AnalyticsApiSourceConnectorConfig config;
+    private AnalyticsApiSourceConnectorConfig config;
+    private ObjectMapper objectMapper;
 
     @Override
     public String version() {
@@ -28,6 +29,7 @@ public class AnalyticsApiSourceTask extends SourceTask {
     @Override
     public void start(Map<String, String> settings) {
         this.config = new AnalyticsApiSourceConnectorConfig(settings);
+        this.objectMapper = new ObjectMapper();
     }
 
     @Override

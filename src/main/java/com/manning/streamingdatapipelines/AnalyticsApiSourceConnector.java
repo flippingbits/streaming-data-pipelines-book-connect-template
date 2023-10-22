@@ -9,12 +9,10 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.IntStream.range;
 
 public class AnalyticsApiSourceConnector extends SourceConnector {
-    Map<String, String> settings;
+    private Map<String, String> settings;
 
     @Override
     public void start(Map<String, String> settings) {
-        AnalyticsApiSourceConnectorConfig config =
-          new AnalyticsApiSourceConnectorConfig(settings);
         this.settings = settings;
     }
 
