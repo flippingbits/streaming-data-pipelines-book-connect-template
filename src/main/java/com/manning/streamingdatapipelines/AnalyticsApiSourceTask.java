@@ -10,9 +10,7 @@ import org.apache.kafka.connect.source.SourceTask;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
-import java.util.Map;
-import java.util.ArrayList;
+import java.util.*;
 
 import static java.util.Collections.emptyMap;
 import static org.apache.kafka.connect.data.SchemaBuilder.string;

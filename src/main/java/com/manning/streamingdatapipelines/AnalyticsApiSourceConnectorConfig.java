@@ -33,9 +33,9 @@ public class AnalyticsApiSourceConnectorConfig extends AbstractConfig {
              .define(
                  "base.uri",
                  ConfigDef.Type.STRING,
-                 "http://localhost:8989",
+                 "http://localhost:8080",
                  ConfigDef.Importance.HIGH,
-                 "The base URI of the API, e.g., http://localhost:8989."
+                 "The base URI of the API, e.g., http://localhost:8080."
              )
              .define(
                  "poll.interval.ms",
